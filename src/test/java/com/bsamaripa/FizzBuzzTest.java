@@ -37,19 +37,36 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void zero() {
+    void isIntegerTest() {
+        assertTrue(FizzBuzz.isInteger("0"));
+        assertTrue(FizzBuzz.isInteger("13"));
+        assertFalse(FizzBuzz.isInteger(""));
+        assertFalse(FizzBuzz.isInteger("fizz"));
+    }
+    @Test
+    void negativeTest() {
+        assertEquals("-1", FizzBuzz.FizzBuzz(-1));
+    }
+
+    @Test
+    void zeroTest() {
         assertEquals("0", FizzBuzz.FizzBuzz(0));
     }
 
     @Test
-    void single() {
+    void singleTest() {
         assertEquals("1", FizzBuzz.FizzBuzz(1));
     }
 
     @Test
-    void twenty() {
+    void tenTest() {
+        String expected = "1 2 lucky 4 buzz fizz 7 8 fizz buzz";
+        assertEquals(expected, FizzBuzz.FizzBuzz(10));
+    }
+
+    @Test
+    void twentyTest() {
         String expected = "1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz";
         assertEquals(expected, FizzBuzz.FizzBuzz(20));
     }
-
 }
