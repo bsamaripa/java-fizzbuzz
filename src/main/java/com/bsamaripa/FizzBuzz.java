@@ -6,14 +6,14 @@ import java.util.stream.IntStream;
 public class FizzBuzz {
     public String FizzBuzz(int num) {
         if (num <= 1) {
-            System.out.print(String.format("%s", num));
+            System.out.println(String.format("%s", num));
             return String.format("%s", num);
         }
 
         List<String> res = IntStream.rangeClosed(1, num)
             .mapToObj(i -> checkFizzBuzz(i)).collect(Collectors.toList());
 
-        System.out.print(String.join(" ", res));
+        System.out.println(String.join(" ", res));
         return String.join(" ", res);
     }
 
