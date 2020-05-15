@@ -19,6 +19,7 @@ public class FizzBuzz {
 
     String checkFizzBuzz(int num) {
         if (num <= 0) return String.format("%s", num);
+        else if (containsThree(num)) return "lucky";
         else if (num % 15 == 0 ) return "fizzbuzz";
         else if (divBy(num, 5)) return "buzz";
         else if (divBy(num, 3)) return "fizz";
@@ -27,6 +28,12 @@ public class FizzBuzz {
 
     boolean divBy(int num, int div) {
         return num % div == 0;
+    }
+
+    boolean containsThree(int num) {
+        String str = String.valueOf(num);
+        if (str.contains("3")) return true;
+        return false;
     }
 }
 
