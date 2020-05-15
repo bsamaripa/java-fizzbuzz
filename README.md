@@ -1,4 +1,7 @@
-# FizzBuzz for AdAction
+# FizzBuzz in Java
+
+## Usage
+```mvn test```
 
 ## Answers
 I have placed my solutions to the various steps in their own branches for isolation.
